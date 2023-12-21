@@ -17,11 +17,20 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
+import { MatIconModule }  from '@angular/material/icon';
+import { MatMenuModule }  from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+import { ProfileComponent } from './profile/profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { GenreComponent } from './genre/genre.component';
+import { DirectorComponent } from './director/director.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomeComponent},
-  { path: 'movies', component: MovieCardComponent},
+  { path: 'movies', component: HomeComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -31,7 +40,12 @@ const appRoutes: Routes = [
     RegistrationComponent,
     LoginComponent,
     WelcomeComponent,
-    MovieCardComponent
+    ProfileComponent,
+    NavbarComponent,
+    HomeComponent,
+    GenreComponent,
+    DirectorComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +58,11 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    MatMenuModule,
+    MatDividerModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
