@@ -79,6 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+            "baseHref": "/my-path/",
             "buildTarget": "myFlix-Angular-host:build"
           }
         },
